@@ -8,9 +8,6 @@ import os
 from time import gmtime, strftime, sleep
 import traceback
 
-import subprocess
-subprocess.call(["pip", "install", "mlflow"])
-
 import mlflow
 
 user_profile_name = os.getenv('USER')
@@ -72,7 +69,7 @@ if __name__=="__main__":
     target_col = "y"
 
     # Set the Tracking Server URI using the ARN of the Tracking Server you created
-    mlflow.set_tracking_uri(os.environ['arn:aws:sagemaker:us-east-2:284038851123:mlflow-tracking-server/mlflow-d-21qjmpg5nbfo-16-17-36-05'])
+    mlflow.set_tracking_uri(os.environ['MLFLOW_TRACKING_ARN'])
     
     # Enable autologging in MLflow
     mlflow.autolog()
