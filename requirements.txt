@@ -1,1 +1,5 @@
-mlflow
+s3fs==2025.9.0
+xgboost==2.1.4
+mlflow==2.22.2
+sagemaker-mlflow==0.1.1
+sagemaker==2.253.1
